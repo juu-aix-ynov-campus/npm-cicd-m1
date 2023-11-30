@@ -5,4 +5,8 @@ describe('ComputeService', () => {
     const added = ComputeService.Add(1, 2);
     expect(added).toBe(3);
   });
+  it('should add multiple numbers', () => {
+    const added = ComputeService.Add(1, 2, 3);
+    expect(added).toBe(6);
+  });
 });

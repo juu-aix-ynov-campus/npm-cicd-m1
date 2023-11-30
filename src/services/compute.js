@@ -1,4 +1,4 @@
-const Add = (a, b) => a + b;
+const Add = (...args) => args.reduce((a, b) => a + b, 0);
 
 const ComputeService = { Add };
 
