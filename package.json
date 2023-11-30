@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "npm run test -- --coverage",
     "start": "node src/index.js",
     "lint": "eslint src/*.js",
     "lint:fix": "eslint --fix src/*.js"
