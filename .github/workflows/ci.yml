@@ -12,6 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: 'Version to release'
+        required: false
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -64,7 +69,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Livraison
     needs: [ build ]
-    if: false # ssi release
+    if: ${{ inputs.version != '' }} # ssi release
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout
