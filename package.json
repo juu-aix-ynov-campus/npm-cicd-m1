@@ -1,6 +1,6 @@
 {
   "name": "npm-cicd-m1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,10 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "reporters": ["default","jest-junit"],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ],
     "coverageDirectory": "reports/coverage"
   },
   "jest-junit": {
